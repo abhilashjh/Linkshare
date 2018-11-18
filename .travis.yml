@@ -14,7 +14,7 @@ jdk:
 services:
         - mysql
 before_install:
-        -  mysql -e 'CREATE DATABASE IF NOT iEXISTS linkshare';
+        -  mysql -e 'CREATE DATABASE IF NOT EXISTS linkshare';
 before_script:
         -  rm -rf target
 script: "./travis.build.sh"
