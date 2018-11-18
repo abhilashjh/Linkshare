@@ -1,0 +1,54 @@
+
+#imgLogo {
+    float: left;
+    margin-top: 7px;
+}
+
+.pageHeader {
+    background-color: #f7f7f7;
+}
+.modal-body .form-control{
+    display: inline-block !important;
+    width: 95% !important;
+}
+
+
+.search {
+    float: left;
+    margin-top: 19px;
+    width: 77%;
+}
+
+.userActions {
+    margin-top: 17px;
+    margin-left: 10px;
+    float: right;
+}
+
+.pageFooter {
+    background-color: #f7f7f7;
+    position: absolute;
+    margin-bottom: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: small;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.search .form-control {
+    height: 30px !important;
+}
+
+.login-form {
+    line-height: 20px;
+    color: #2b542c !important;
+}
+
+.header_top {
+    color: #2aabd2;
+}
+
+.errorbox {
+    border: 1px solid #ffa8a8 !important;
+    background-color: #fff4eb !important
+}

@@ -1,0 +1,146 @@
+
+
+#title {
+    float: left;
+    font-family: "Bookman", Georgia, "Times New Roman", serif;
+}
+
+.socialIcons {
+    margin-top: 21px;
+    float: right;
+}
+
+
+.fa-facebook {
+    color: #FFFFFF;
+}
+
+.facebook .fa-circle {
+    color: #3b5998;
+}
+
+.linkedin .fa-circle {
+    color: #0077B5;
+}
+
+.fa-linkedin {
+    color: #FFFFFF;
+}
+
+.facebook:hover .fa-circle {
+    color: gray;
+}
+
+.linkedin:hover .fa-circle {
+    color: gray;
+}
+
+.loginBody{
+    background-color: #ffffff;
+    height: 85%;
+    margin-top: 7px;
+    border-radius: 5px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.recentShares .divTitle{
+    background-color: #f7f7f7;
+    color: #000000;
+    line-height: 30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-weight: bold;
+    padding-left: 10px;
+    border: 1px solid #2b669a;
+    border-bottom: 0px;
+}
+
+.recentShares .divbody{
+    min-height: 200px;
+    max-height: 200px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: solid;
+    border-width: 1px;
+    border-color: #2b669a;
+}
+
+.recentShares .divbody .nodata{
+    margin-top: 90px;
+    line-height: 20px;
+    vertical-align: middle;
+}
+
+.topPosts .divTitle{
+    margin-top: 10px;
+    background-color: #f7f7f7;
+    color: #000000;
+    line-height: 30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-weight: bold;
+    padding-left: 10px;
+    border: 1px solid #2b669a;
+    border-bottom: 0px;
+}
+
+.topPosts .divbody{
+    min-height: 200px;
+    max-height: 200px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: solid;
+    border-width: 1px;
+    border-color: #2b669a;
+}
+
+.topPosts .divbody .nodata {
+    margin-top: 90px;
+    line-height: 20px;
+    vertical-align: middle;
+}
+
+.loginForm{
+    float: left;
+}
+
+.loginForm .loginFormTitle{
+    margin-top: 5px;
+    background-color: #f7f7f7;
+    color: #000000;
+    line-height: 30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-weight: bold;
+    padding-left: 10px;
+    border: 1px solid #2b669a;
+    border-bottom: 0px;
+}
+
+.loginForm .loginFormBody{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: solid;
+    border-width: 1px;
+    border-color: #2b669a;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 140px;
+}
+
+.loginForm .loginFormBody > div > span {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.loginForm .loginFormBody > div > span >label{
+    line-height: 29px;
+}
+
+.loginFormBody .form-control {
+    display: inline-block !important;
+    width: 95% !important;
+}
+
