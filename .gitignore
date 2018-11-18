@@ -1,0 +1,13 @@
+*.idea
+out
+*.iml
+target
+web-app/WEB-INF/tld
+lib/com_ups_wsdl_xoltws_rate_v1.jar
+lib/com_ups_xmlschema_xoltws_common_v1.jar
+lib/com_ups_xmlschema_xoltws_error_v1.jar
+lib/com_ups_xmlschema_xoltws_rate_v1.jar
+lib/com_ups_xmlschema_xoltws_upss_v1.jar
+web-app/template
+axis.log
+*.slcache
