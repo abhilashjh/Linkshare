@@ -1,0 +1,24 @@
+dist: trusty
+sudo: true
+addons:
+        chrome: stable
+before_cache:
+        -  rm -f $HOME/.gradle/caches/modules-2/module-2.lock
+cache:
+        directories:
+                - $HOME/.gradle/caches/
+                - $HOME/.gradle/wrapper/
+language: groovy
+jdk:
+        - openjdk7
+services:
+        - mysql
+before_install:
+        -  sudo mysql -e "use mysql; update user set authentication_string=PASSWORD('12345') where User='root'; update user set plugin='mysql_native_password';FLUSH_PRIVILEGES;"
+        -  sudo mysql_upgrade -u root -p12345
+        -  sudo service mysql restart  
+        -  mysql -e 'CREATE DATABASE IF NOT iEXISTS linkshare';
+before_script:
+        -  rm -rf target
+script: "./travis.build.sh"
+
