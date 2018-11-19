@@ -3,8 +3,7 @@
 EXIT_STATUS=0
 
 
-./gradlew --stop
-./gradlew clean classes --no-daemon
-./gradlew testClasses --no-daemon
+./grailsw refresh-dependencies --non-interactive
+./grailsw compile --non-interactive
 
 exit $EXIT_STATUS
