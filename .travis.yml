@@ -13,9 +13,10 @@ jdk:
         - openjdk7
 services:
         - mysql
+script: "./travis-build.sh"
 before_install:
+        -  chmod +x travis-build.sh
         -  mysql -e 'CREATE DATABASE IF NOT EXISTS linkshare';
 before_script:
         -  rm -rf target
-script: "./travis-build.sh"
 
