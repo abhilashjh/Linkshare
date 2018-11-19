@@ -19,4 +19,23 @@ before_install:
         -  mysql -e 'CREATE DATABASE IF NOT EXISTS linkshare';
 before_script:
         -  rm -rf target
-
+deploy:
+        - provider: s3
+          access_key_id: $AWS_ACCESS_KEY
+          secret_access_key: $AWS_SECRET_KEY
+          local_dir: target
+          skip_cleanup: true
+          on: &2
+                  repo: abhilashjh/Linkshare
+          bucket: abhilash-nexthoughts
+          region: us-east-2
+        - provider: codedeploy
+          access_key_id: $AWS_ACCESS_KEY
+          secret_access_key: $AWS_SECRET_KEY
+          bucket: abhilash-nexthoughts
+          key: linkshare-0.1.war
+          bundle_type: war
+          application: linkshare
+          deployment_group: nexthoughts
+          region: us-east-2
+          on: *2
