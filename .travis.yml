@@ -39,3 +39,5 @@ deploy:
           deployment_group: nexthoughts
           region: us-east-2
           on: *2
+notifications:
+    slack: merchglobal:fBcvZazgIwg7Og0HfjbIoMNA
