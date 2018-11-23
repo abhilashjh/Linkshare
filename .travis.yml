@@ -33,7 +33,7 @@ deploy:
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
   bucket: "abhilash-nexthoughts"
-  key: target.zip
+  key: linkshare-0.1.war
   bundle_type:  zip
   application: linkshare
   deployment_group: nexthoughts
