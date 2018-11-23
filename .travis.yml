@@ -19,13 +19,11 @@ before_install:
 - chmod +x travis-build.sh
 - mysql -e 'CREATE DATABASE IF NOT EXISTS linkshare';
 after_install:
-- echo $TRAVIS_COMMIT
 - echo "After Install"
 before_script:
 - echo "Before Script"
 - rm -rf target
 after_script:
-- echo $TRAVIS_BRANCH
 - echo "After Script"
 deploy:
 - provider: s3
