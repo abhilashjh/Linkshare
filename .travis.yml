@@ -1,42 +1,42 @@
 dist: trusty
 sudo: true
 addons:
-        chrome: stable
+  chrome: stable
 before_cache:
-        -  rm -f $HOME/.gradle/caches/modules-2/module-2.lock
+- rm -f $HOME/.gradle/caches/modules-2/module-2.lock
 cache:
-        directories:
-                - $HOME/.gradle/caches/
-                - $HOME/.gradle/wrapper/
+  directories:
+  - $HOME/.gradle/caches/
+  - $HOME/.gradle/wrapper/
 language: groovy
 jdk:
-        - openjdk7
+- openjdk7
 services:
-        - mysql
+- mysql
 script: "./travis-build.sh"
 before_install:
-        -  chmod +x travis-build.sh
-        -  mysql -e 'CREATE DATABASE IF NOT EXISTS linkshare';
+- chmod +x travis-build.sh
+- mysql -e 'CREATE DATABASE IF NOT EXISTS linkshare';
 before_script:
-        -  rm -rf target
+- rm -rf target
 deploy:
-        - provider: s3
-          access_key_id: $AWS_ACCESS_KEY
-          secret_access_key: $AWS_SECRET_KEY
-          local_dir: target
-          skip_cleanup: true
-          on:
-            branch: travis
-          bucket: abhilash-nexthoughts
-          region: "us-east-2"
-        - provider: codedeploy
-          access_key_id: $AWS_ACCESS_KEY
-          secret_access_key: $AWS_SECRET_KEY
-          bucket: abhilash-nexthoughts
-          key: linkshare-0.1.war
-          bundle_type: war
-          application: linkshare
-          deployment_group: nexthoughts
-          region: "us-east-2"
-          on:
-            branch: travis
+- provider: s3
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+  local_dir: target
+  skip_cleanup: true
+  on:
+    branch: travis
+  bucket: abhilash-nexthoughts
+  region: "us-east-2"
+- provider: codedeploy
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+  bucket: "abhilash-nexthoughts"
+  key: target.zip
+  bundle_type:  zip
+  application: linkshare
+  deployment_group: nexthoughts
+  region: "us-east-1"
+  on:
+    branch: travis
