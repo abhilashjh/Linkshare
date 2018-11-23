@@ -10,12 +10,14 @@ import spock.lang.Specification
 @TestFor(RegistrationController)
 class RegistrationControllerSpec extends Specification {
 
-    def setup() {
-    }
-
-    def cleanup() {
-    }
-
     void "test something"() {
+
+        when:
+        String str = "Hello"
+
+        then:
+        println str
+        assert(str == "Hello")
+
     }
 }
