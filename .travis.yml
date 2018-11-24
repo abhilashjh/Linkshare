@@ -13,7 +13,8 @@ jdk:
 - openjdk7
 services:
 - mysql
-script: "./travis-build.sh"
+script:
+- ./grailsw test-app :unit --non-interactive
 before_install:
 - echo "Before Install"
 - chmod +x travis-build.sh
@@ -25,24 +26,24 @@ before_script:
 - rm -rf target
 after_script:
 - echo "After Script"
-deploy:
-- provider: s3
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SECRET_KEY
-  local_dir: dpl_cd_upload
-  skip_cleanup: true
-  on:
-    branch: master
-  bucket: abhilash-nexthoughts
-  region: "us-east-2"
-- provider: codedeploy
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SECRET_KEY
-  bucket: "abhilash-nexthoughts"
-  key: target.zip
-  bundle_type:  zip
-  application: linkshare
-  deployment_group: nexthoughts
-  region: "us-east-1"
-  on:
-    branch: master
+#deploy:
+#- provider: s3
+#  access_key_id: $AWS_ACCESS_KEY
+#  secret_access_key: $AWS_SECRET_KEY
+#  local_dir: dpl_cd_upload
+#  skip_cleanup: true
+#  on:
+#    branch: master
+#  bucket: abhilash-nexthoughts
+#  region: "us-east-2"
+#- provider: codedeploy
+#  access_key_id: $AWS_ACCESS_KEY
+#  secret_access_key: $AWS_SECRET_KEY
+#  bucket: "abhilash-nexthoughts"
+#  key: target.zip
+#  bundle_type:  zip
+#  application: linkshare
+#  deployment_group: nexthoughts
+#  region: "us-east-1"
+#  on:
+#    branch: master
