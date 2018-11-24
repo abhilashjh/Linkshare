@@ -17,7 +17,7 @@ class RegistrationControllerSpec extends Specification {
 
         then:
         println str
-        assert(str == "Hello")
+        assert(str == "Bye")
 
     }
 }
