@@ -12,13 +12,12 @@ import spock.lang.Specification
 class RegistrationControllerSpec extends Specification {
 
     def setup() {
-        new User(username: 'abhilash', password: '123456', email: 'abhilashjha@gmail.com', firstName: 'Abhilash', lastName: 'Jha', admin: Boolean.FALSE).save(flush: true)    }
+    }
 
     def cleanup() {
     }
 
     void "test something"() {
-        expect:
-            User.count() == 1
+
     }
 }
