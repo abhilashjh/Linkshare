@@ -14,7 +14,7 @@ jdk:
 services:
 - mysql
 script:
-- ./grailsw test-app :unit --non-interactive
+- "./travis-build.sh"
 before_install:
 - echo "Before Install"
 - chmod +x travis-build.sh
