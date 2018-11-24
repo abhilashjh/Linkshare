@@ -41,3 +41,4 @@ before_script:
 #          on: *2
 notifications:
     slack: merchglobal:fBcvZazgIwg7Og0HfjbIoMNA
+    email: puneetmungali93@gmail.com
